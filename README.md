@@ -1,74 +1,67 @@
 
-🥭  Mango 🥭 
+# Projeto NSC-ABC
 
-## 🌌 Tecnologias Utilizadas
+Este é um projeto de exemplo que implementa um modelo NSC-ABC em Go. O projeto demonstra como gerenciar a lógica de controle e interação com um modelo de dados usando uma estrutura de controlador.
 
-### 🌟 Linguagens de Programação
+## Tecnologias Utilizadas
 
-![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=flat&logo=java&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-FFD43B?style=flat&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-8CC84B?style=flat&logo=node.js&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
-![Rubyx](https://img.shields.io/badge/Rubyx-CC342D?style=flat&logo=ruby&logoColor=white)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat&logo=lua&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
-![ABC](https://img.shields.io/badge/ABC-000000?style=flat&logo=python&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=flat&logo=graphql&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
-![Material UI](https://img.shields.io/badge/Material%20UI-0081CB?style=flat&logo=materialui&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-F05138?style=flat&logo=swift&logoColor=white) 🍏
+| Tecnologia       | Descrição                             | Bandeira                                                                                              |
+|------------------|---------------------------------------|-------------------------------------------------------------------------------------------------------|
+| **Go**           | Linguagem de programação utilizada para desenvolvimento. | ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)            |
+| **Markdown**     | Formatação de documentação.          | ![Markdown](https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white) |
+| **Git**          | Controle de versão do código.        | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)          |
+| **GitHub**       | Repositório para hospedagem do projeto. | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) |
+| **Visual Studio Code** | Editor de código utilizado.       | ![VSCode](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white) |
 
-## ✨ Visão Geral do Projeto
+## Instalação
 
-Mango é um aplicativo descentralizado (DApp) inovador que utiliza SQLite para gerenciar dados de investidores, ativos e registros. O objetivo é criar uma plataforma flexível que integre vários serviços e aplicações, proporcionando aos usuários um conjunto robusto de ferramentas para gerenciamento de ativos digitais.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu_usuario/nsc-abc.git
+   ```
 
-## 🤖 O Poder do SQLite
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nsc-abc
+   ```
 
-SQLite é um sistema de gerenciamento de banco de dados leve e autocontido, ideal para aplicações que exigem eficiência e simplicidade. Com o Mango, buscamos utilizar a força do SQLite para criar uma plataforma que suporte processos complexos, gerenciamento eficiente de recursos e aplicações de alto desempenho.
+3. Compile o projeto:
+   ```bash
+   go build
+   ```
 
-## ⚙️ Pré-requisitos
+4. Execute o programa:
+   ```bash
+   ./nsc-abc
+   ```
 
-- Ter um sistema operacional UNIX (Linux ou macOS) instalado.
-- Instalar os compiladores necessários para C e Python.
-- Instalar Go para desenvolvimento de serviços.
-- Configurar o PostgreSQL para gerenciamento de banco de dados.
-- Instalar Docker para containerização de aplicações.
-- Conhecimento básico em C, Bash, Python, Go, PostgreSQL, Docker, GraphQL, React, Material UI, Rubyx, WFIT e Swift.
+## Benchmark
 
-## 🚀 Como Começar
+Para medir o desempenho do modelo, você pode usar a biblioteca `testing` do Go. Aqui está um exemplo básico de como você pode criar um benchmark para a função `Generate`:
 
-### Clonar o Repositório
+```go
+func BenchmarkGenerate(b *testing.B) {
+    controller := NewNSCABCController("NSC-ABC", "1.0")
+    for i := 0; i < b.N; i++ {
+        controller.Generate("Teste de entrada")
+    }
+}
+```
+
+### Executar Benchmark
+
+Para executar os testes de benchmark, use o seguinte comando:
 
 ```bash
-git clone https://github.com/seu_usuario/mango.git
+go test -bench=.
 ```
 
-### Atualizar Seu Projeto
+## Contribuições
 
-Após clonar o repositório, navegue até o diretório do projeto e instale as dependências necessárias:
+Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir uma issue.
 
-```bash
-cd mango
-# Instalar dependências do Python (exemplo)
-pip install -r requirements.txt
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
 ```
 
-### Construir e Executar
-
-Siga as instruções específicas nas respectivas pastas para construir e executar cada componente do projeto, como C, Python, Node.js, etc.
-
-## 🔧 Próximos Passos
-
-- Assegure-se de que cada componente esteja bem documentado em seu respectivo diretório.
-- Adicione quaisquer comandos ou scripts específicos que sejam relevantes para a configuração e execução do projeto.
-- Se aplicável, inclua instruções sobre como contribuir ou relatar problemas com o projeto.
-
-## ✉️ Contato
-
-Para mais informações, contribuições ou perguntas, entre em contato com os mantenedores do projeto através da página do GitHub do projeto. 🦅
-
-```
